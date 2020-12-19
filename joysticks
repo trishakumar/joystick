@@ -1,0 +1,30 @@
+int x = A0;
+int y = A1;
+int s = 2;
+int xVal;
+int yVal;
+int sVal;
+int d = 200;
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(x, INPUT);
+pinMode(y, INPUT);
+pinMode(s, INPUT);
+digitalWrite(s, HIGH);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+xVal = analogRead(x);
+yVal = analogRead(y);
+sVal = analogRead(s);
+delay(d);
+Serial.print(" X value = ");
+Serial.print(xVal);
+Serial.print(" Y value = ");
+Serial.print(yVal);
+Serial.print(" Switch state is ");
+Serial.println(sVal);
+}
